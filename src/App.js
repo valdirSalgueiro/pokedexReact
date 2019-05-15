@@ -9,9 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
-function Users() {
-  return <h2>Users</h2>;
-}
 
 function App() {
   return (
@@ -21,7 +18,7 @@ function App() {
           <Toolbar>
             <Typography variant="h6" color="inherit">
               Pokedex
-          </Typography>
+            </Typography>
           </Toolbar>
         </AppBar>
         <Switch>

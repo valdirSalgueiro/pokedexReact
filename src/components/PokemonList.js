@@ -1,6 +1,5 @@
 import React from 'react';
 import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
 
 // components
 import Pokemon from './Pokemon';
@@ -16,8 +15,7 @@ class PokemonList extends React.Component {
                 </div>
             )
         }
-
-
+        
         return (
             <GridList cellHeight={160} cols={3}>
                 {pokemon}

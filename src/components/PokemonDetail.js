@@ -12,7 +12,7 @@ const styles = theme => ({
     card: {
       maxWidth: 400,
     },
-    media: {           // this is the`className` passed to `CardMedia` later
+    media: {           
       width: '20%',
       marginLeft: '33%'
     },
@@ -34,7 +34,7 @@ class PokemonDetail extends React.Component {
                                 {
                                     avatar: response.data.sprites.front_default,
                                     name: capitalize(response.data.name),
-                                    description: capitalize(species.data.flavor_text_entries.filter(f => f.language.name == "en")[0].flavor_text),
+                                    description: capitalize(species.data.flavor_text_entries.filter(f => f.language.name === "en")[0].flavor_text),
                                     types: response.data.types.reverse().map((t) => t.type.name)
                                 }
                             });
