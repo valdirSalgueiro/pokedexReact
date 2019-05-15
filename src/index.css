@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.pokeball {
+  position: absolute;
+  background: url(./assets/pokemonloader.png) 0 0/cover;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: pkgif 1.14s steps(27) infinite;
+  animation: pokeball 1.14s steps(27) infinite;
+}

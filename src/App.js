@@ -1,13 +1,35 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import './components/PokemonList'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import PokemonList from './components/PokemonList';
+import PokemonDetail from './components/PokemonDetail';
+
+import Typography from '@material-ui/core/Typography';
+
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+
+function Users() {
+  return <h2>Users</h2>;
+}
 
 function App() {
   return (
-    <div>
-      <PokemonList/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" color="inherit">
+              Pokedex
+          </Typography>
+          </Toolbar>
+        </AppBar>
+        <Switch>
+          <Route exact path='/' component={PokemonList} />
+          <Route exact path='/:pokemon_id/' component={PokemonDetail} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

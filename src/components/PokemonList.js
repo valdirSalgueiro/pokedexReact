@@ -1,30 +1,29 @@
 import React from 'react';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 
 // components
 import Pokemon from './Pokemon';
 
 class PokemonList extends React.Component {
-  render() {
-    var pokemon = []
-    for (var i = 1; i <= 10; i++) {
-      pokemon.push(
-        <div key={i} >
-          <Pokemon pokeID={i}/>
-          <br />
-        </div>
-      )
-    }
+    render() {
+        var pokemon = []
+        for (var i = 1; i <= 10; i++) {
+            pokemon.push(
+                <div key={i} >
+                    <Pokemon pokeID={i} />
+                    <br />
+                </div>
+            )
+        }
 
-    var divStyle = {
-      maxWidth: '600px',
-      margin: '0 auto'
+
+        return (
+            <GridList cellHeight={160} cols={3}>
+                {pokemon}
+            </GridList>
+        );
     }
-    return (
-      <div style={divStyle}>
-        {pokemon}
-      </div>
-    );
-  }
 
 }
 
