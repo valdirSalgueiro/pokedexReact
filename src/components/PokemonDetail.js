@@ -57,7 +57,7 @@ class PokemonDetail extends React.Component {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="h2">
-                                {this.state.pokemon.name}
+                                {this.state.pokemon.name} #{this.props.match.params.pokemon_id}
                             </Typography>
                             <Typography component="p">
                                 {this.state.pokemon.description}
